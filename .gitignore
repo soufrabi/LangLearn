@@ -1,6 +1,31 @@
-*.out
-# C++
-*.exe
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+### Above combination will ignore all files without extension ###
+
+
+# editor
+.vscode/
+.idea/
+.ccls-cache/
+
+# CPP
+a.out
+input.txt
+output.txt
+gdb.txt
+build/
+
+# JAVA
+*.class
+
+
 
 # LaTeX
 *.aux
