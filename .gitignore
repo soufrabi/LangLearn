@@ -1,1 +1,11 @@
+# C++
 *.exe
+
+# LaTeX
+*.aux
+*.log
+*.synctex.gz
+*.pdf
+*.fls
+*.iml
+*.fdb_latexmk
