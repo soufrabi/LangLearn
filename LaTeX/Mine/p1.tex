@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+
+\newtcblisting{mylisting}[
+  listing only,
+  hbox,
+  colframe=cyan,
+  colback=cyan!10,
+  listing options={
+    basicstyle=\small\ttfamily,
+    breaklines=true,
+    columns=fullflexible
+  },
+]
+
+\begin{document}
+
+\begin{mylisting}
+int main(int ac, char *av[]) 
+{
+  printf("Hello, World");
+  return 0;
+}
+\end{mylisting}
+
+\begin{mylisting}
+int main(int ac, char *av[], char **ep,char *av[], char **ep) 
+{
+  printf("Hello, World");
+  return 0;
+}
+\end{mylisting}
+
+\end{document}

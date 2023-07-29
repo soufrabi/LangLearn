@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\usepackage{fancyvrb}
+\tcbuselibrary{skins,breakable}
+
+\newtcbox{\cppcode}{enhanced,
+  colframe=black,
+  colback=gray!10,
+  boxrule=1pt,
+  arc=5pt,
+  boxsep=5pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt,
+  breakable,
+}
+
+\begin{document}
+
+\begin{cppcode}
+  \begin{Verbatim}
+#include <iostream>
+
+int main()
+{
+  std::cout << "Hello, world!" << std::endl;
+  return 0;
+}
+  \end{Verbatim}
+\end{cppcode}
+
+\end{document}
+

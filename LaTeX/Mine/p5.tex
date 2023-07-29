@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{fancyvrb}
+
+\newtcolorbox{codebox}[1]{
+box align=top,
+colback=white!5!white,
+colframe=white!75!black,
+title=#1
+}
+
+\begin{document}
+
+\begin{enumerate}
+  \item Lorem.
+  \item
+   \begin{codebox}{Swap}
+      \begin{Verbatim}
+   Hello.
+   #include <bits/stdc++.h>
+      \end{Verbatim}
+    \end{codebox}
+  \item Epsum.
+\end{enumerate}
+
+\end{document}

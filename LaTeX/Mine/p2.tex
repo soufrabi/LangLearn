@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{hvpygmentex}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listing}
+
+\newtcblisting{mylisting}{
+  colframe=cyan,
+  colback=cyan!10,
+  listing only,
+  listing engine=minted,
+  minted language=cpp,
+  minted options={fontsize=\small,linenos,numbersep=3mm},
+}
+
+\begin{document}
+
+\begin{mylisting}
+int main(int ac, char *av[]) 
+{
+  printf("Hello, World");
+  return 0;
+}
+\end{mylisting}
+
+\begin{mylisting}
+int main(int ac, char *av[], char **ep,char *av[], char **ep) 
+{
+  printf("Hello, World");
+  return 0;
+}
+\end{mylisting}
+
+\end{document}
