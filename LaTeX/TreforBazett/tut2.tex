@@ -1,6 +1,17 @@
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{amsmath,amsthm,amsfonts}
 \usepackage{graphicx}
+% \newtheorem{theorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\newcommand{\R}{\mathbb{R}}
+% cv for column vector
+\newcommand{\cv}[2]{\begin{bmatrix}
+#1\\
+#2\\
+\end{bmatrix}
+}
 
 \title{Lecture 2}
 \author{Dark Lord}
@@ -61,13 +72,59 @@ Equation~\ref{limit} is very cool
 
 I like table no~\ref{niftytable}
 
+\newpage
+
+
+% \section{Graphics}
+
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{img1}
     \caption{Hydreigon}\label{hydreigon}
 
-
-
 \end{figure}
+
+
+\newpage
+\section{New Theorem command}
+
+\begin{theorem}[YouTube]
+You should like and subscribe
+\end{theorem}
+\begin{proof}
+Left to the interested subscriber
+\end{proof}
+\begin{theorem}
+You should ring the notification bell
+\end{theorem}
+
+\begin{corollary}
+Check out overleaf as well
+\end{corollary}
+
+
+\section{Macros}
+
+
+The real number $\mathbb{R}$
+% mathbb requires amsfonts
+
+The real number $\R$
+
+\vspace{20pt}
+
+% bmatrix bracket matrix
+Bracket matrix \textbf{traditional way}
+\[
+    \begin{bmatrix}
+        a\\
+        b\\
+    \end{bmatrix}
+\]
+
+Bracket matrix \textbf{\textit{issuing newcommand}}
+\[
+    \cv{c}{d}
+\]
 
 \end{document}

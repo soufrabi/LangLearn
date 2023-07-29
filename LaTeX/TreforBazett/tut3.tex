@@ -1,0 +1,124 @@
+\documentclass{report}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{color}
+% color is preinstalled
+\usepackage{xcolor}
+
+\usepackage{lipsum} 
+%to generate random text
+
+% Package : hyperref is preinstalled
+% \usepackage{hyperref}
+% \usepackage[colorlinks=true, linkcolor=Maroon, urlcolor=Maroon]{hyperref}
+\usepackage[hidelinks]{hyperref}
+
+% Package fancyvrb is preinstalled
+% Allows you to write thinks verbatim like code block
+\usepackage{fancyvrb}
+
+
+% fancydr is part of Latex kernel
+%  package lastpage is not in texlive-core
+% Fancy header packager
+%%%% Works only if documentclass is report
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\lhead{Trevor's awesome Latex guid}
+\rhead{Sponsored by overleaf}
+\cfoot{Page of \thepage}
+
+
+% etoolbox % use carefully
+\usepackage{etoolbox} % use carefully
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+% so even on the first page of new chapter you'll get a header
+
+
+% \usepackage{fancychap}
+
+% tcolorbox needs to be installed
+% \usepackage{tikz,tcolorbox}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+% tcolorbox theorem environment
+\newtcbtheorem{theo}%
+    {Theorem}{}{theorem}
+
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Useful Packages}
+\author{Dark Lord}
+
+
+\begin{document}
+\maketitle
+
+\section{hyperref}
+I want to link to my \href{https://www.youtube.com/watch?v=331YxgOJUGw&list=PLHXZ9OQGMqxcWWkx2DMnQmj5os2X5ZR73}{Youtube Channel}
+afo
+afahaof
+
+fooha
+
+\section{fancyvbr}
+
+\begin{verbatim}
+This is inside regular verbatim environment
+\end{verbatim}
+
+% Use Verbatim with a capital 'V'
+% fancy verbatim environment
+% import color package
+\begin{Verbatim}[numbers=left,frame=single,formatcom=\color{red}]
+print("text")
+#include <stdio.h>
+\end{Verbatim}
+
+
+
+
+\section{Color}
+
+Let's make {\color{red} this} red
+\color{blue}
+This will be blue,
+\color{black}
+but this will be black
+
+\section{tcolorbox}
+\begin{tcolorbox}
+This is a tcolor box 
+Install using texlive-most
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!50!black,title=My Nice heading]
+
+
+\end{tcolorbox}
+
+
+\begin{theo}{Like and Subscribe}{likesub}
+
+
+\end{theo}
+
+
+\section{SI Units}
+
+\[ 5 kg m /s^2 \]
+% hack
+\[5  \mathrm{kg}\ \mathrm{m}/\mathrm{s}^2 \]
+
+\section{Setspace}
+
+\lipsum[1-10]
+
+
+\end{document}
+
