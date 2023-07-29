@@ -1,0 +1,44 @@
+\documentclass[a4paper]{moderncv}
+\usepackage[scale=0.75]{geometry}
+%for blind text
+\usepackage{blindtext}
+\moderncvtheme[blue]{classic}
+% casual classic
+\firstname{John}
+\familyname{Doe}
+\title{Curriculum Vitae}
+\address{Park Street 1}{12345 Small-Town}{German}
+\mobile{934-5151-1245}
+\email{john\_dow@provider.com}
+\photo{dp.jpeg}
+
+%This part is for the letter to the employer
+\recipient{Max Mustermann}{Garden Street 1\\54321 Big-City\\Germany}
+\opening{Dear sir/madam,}
+\closing{Kind regards,}
+% Omit the above part if you don't want a letter to the employer
+
+%\setlength{\hintscolumnwidth}{3cm}
+\begin{document}
+%for letter
+\makelettertitle
+\blindtext
+\makeletterclosing
+%comment the above lines if you don't want the letter
+
+\newpage
+%this new page is had to be inserted because of the email
+\maketitle
+\section*{Personal Details}
+\cvitem{Birth}{2000/01/01, Small-Town}
+\cvitem{Family}{Unmarried}
+\cvitem{Nationality}{German}
+\section*{Work Experience}
+\cventry{1999--2002}{Research Assistant}{Sample University}{Small-Town}{}{Teaching and researching about awesome stuff}
+\section*{Language Skills}
+\cvlanguage{German}{Native Language}{}
+\cvlanguage{English}{Fluently}{School Education}
+\section*{Special Skills}
+\cvlistitem{Reading Books}
+\cvlistitem{Programming Languages : C++,Python}
+\end{document}

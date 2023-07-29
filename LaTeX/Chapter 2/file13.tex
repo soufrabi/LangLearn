@@ -1,0 +1,20 @@
+\documentclass{article}
+\title{Using Boxes to Limit the Width of Paragraphs}
+%Parbox command
+\begin{document}
+\parbox{3cm}{TUG is an acronym. It means \TeX\ Users Group}	
+%Justify alignment creates big gaps between words
+
+
+\bigskip
+\bigskip
+\bigskip
+Text Line
+\quad
+\parbox[b]{1.8cm}{This is a bottom aligned parbox}
+\quad
+\parbox{1.5cm}{This is a center aligned parbox}
+\qquad
+\parbox[t]{2cm}{This is a top aligned parbox}
+
+\end{document}
