@@ -21,6 +21,7 @@ int main(){
     //won't throw an error
     //but, it will cause ambiguity and then error
     //if common variables/methods are called
+    //after this
 
     return 0;
 }
